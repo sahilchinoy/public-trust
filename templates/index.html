@@ -1,0 +1,57 @@
+{% extends '_base.html' %}
+
+{% block title %}The Public Trust | The Daily Californian{% endblock %}
+
+{% block header_content %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="section">
+{% include 'slides/start.html' %}
+
+{% include 'slides/intro.html' %}
+
+{% include 'slides/state-funding.html' %}
+{% include 'slides/brady_precipice.html' %}
+{% include 'slides/reich_some-danger.html' %}
+{% include 'slides/dirks_no-funding.html' %}
+
+{% include 'slides/tuition.html' %}
+{% include 'slides/johnson_affordable.html' %}
+{% include 'slides/reich_careful.html' %}
+{% include 'slides/cochrane_middle-class.html' %}
+
+{% include 'slides/out-of-state.html' %}
+{% include 'slides/johnson_out-of-state.html' %}
+{% include 'slides/kadir_out-of-state.html' %}
+
+{% include 'slides/access.html' %}
+
+{% include 'slides/philanthropy.html' %}
+{% include 'slides/dirks_firewalls.html' %}
+
+{% include 'slides/research.html' %}
+
+{% include 'slides/grid.html' %}
+
+{% include 'slides/conclusion.html' %}
+</div>
+
+<div class="primary-navigation" style="opacity:1;">
+    <div class="controlArrow prev"></div>
+    <div class="controlArrow next"></div>
+</div>
+
+<div id="narrative-player"></div>
+<div id="ambient-player"></div>
+
+<div class="progress-indicator">
+    <div class="current-progress"></div>
+</div>
+
+{% endblock %}
+
+{% block wide_content %}
+{% endblock %}

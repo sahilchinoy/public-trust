@@ -1,0 +1,53 @@
+//titlecard
+.titlecard {
+     .subhed {
+        text-align: center;
+        text-transform: uppercase;
+        color: @red;
+        font-size: 20px;
+        margin: 25px 0;
+
+        @media @screen-small-above {
+            font-size: 40px;
+        }
+
+        .numeral {
+            font-size: 30px;
+
+            @media @screen-small-above {
+                font-size: 50px;
+            }
+        }
+     }
+
+     .description {
+        margin: 0 auto;
+        max-width: 700px;
+        font-size: 14px;
+        line-height: 1.3em;
+
+        @media @screen-small-above {
+            font-size: 18px;
+        }
+    }
+
+    .exhibit {
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-top: 40px;
+
+        .pullquote {
+            font-size: 18px;
+            line-height: 1.3em;
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 10px 30px 10px 30px;
+            border: 1px solid @red;
+            font-style: italic;
+
+            @media @screen-small-above {
+                font-size: 22px;
+            }
+        }
+    }
+}

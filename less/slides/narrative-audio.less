@@ -1,0 +1,56 @@
+.narrative-header {
+    margin-top: 10px;
+
+    .info-person {
+        margin: 0 auto;
+        max-width: 700px;
+        text-align: center;
+
+        span {
+            display: block;
+            @media @screen-small-above {
+                display: inline;
+            }
+        }
+
+        .name {
+            font-size: 22px;
+            @media @screen-small-above {
+                font-size: 30px;
+            }
+        }
+        
+        .title {
+            color: @grey;
+            font-size: 14px;
+
+            @media @screen-small-above {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.img-wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    text-align: center;
+
+    @media @screen-tiny-above {
+        bottom: 40px;
+    }
+
+    .main-img {
+        width: 80%;
+        height: 40vh;
+        object-fit: cover;
+
+        @media @screen-small-above {
+            height: 60vh;
+        }
+
+    }
+
+}

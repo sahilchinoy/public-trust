@@ -1,0 +1,17 @@
+{% block slide_wrapper %}
+<div class="slide {% block extra_class %} {% endblock %}" data-narrative="{% block narrative %}{% endblock %}">
+    {% block slide_body %}
+    <div class="text full-block">
+        <div class="">
+            <div class="full-block-content">
+                {% block slide_content %}{% endblock slide_content %}
+            </div><!--full-block-content-->
+                <div class="credit">
+                    {% block credit %}
+                    {% endblock credit %}
+                </div>
+        </div><!--full-block-cell-->
+    </div><!--full-block-->
+    {% endblock slide_body %}
+</div><!--slide-->
+{% endblock slide_wrapper %}

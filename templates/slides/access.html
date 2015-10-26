@@ -1,0 +1,21 @@
+{% extends 'slide_templates/titlecard.html' %}
+
+{% block numeral %}IV.{% endblock %}
+{% block subhed %}Access{% endblock %}
+{% block description %}Although Berkeley’s admission rate has steadily declined over __, the campus enrolls more than one-third Pell Grant recipients, more than twice the proportion at all Ivy League schools combined. Still, some are concerned that UC Berkeley’s student body doesn’t represent the socioeconomic or racial diversity of California’s population.{% endblock %}
+
+{% block exhibit %}
+<div class="graphic">
+	<h1>UC resident charges, 1980-2014</h1>
+	<div id="tuition-chart"></div>
+	<div class="footnotes">
+	    <p>Adjusted for inflation.</p>
+	</div>
+	<div class="footer">
+	    <p>Source: University of California</p>
+	</div>
+</div>
+<script type="text/javascript">
+GRAPHIC.lineChart('/data/charts/tuition.csv','#tuition-chart');
+</script>
+{% endblock %}

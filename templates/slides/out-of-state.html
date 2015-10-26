@@ -1,0 +1,19 @@
+{% extends 'slide_templates/titlecard.html' %}
+
+{% block numeral %}III.{% endblock %}
+{% block subhed %}Out of state{% endblock %}
+{% block description %}The proportion of Berkeley freshmen enrolling from outside California has doubled in less than a decade. Out-of-state and international students pay higher tuition, which the university uses to finance enrollment of California residents. While some welcome the diversity these students bring to the campus, others think increased out-of-state enrollment contradicts UC Berkeley’s commitment to the people of California. 
+{% endblock %}
+
+{% block exhibit %}
+<div class="graphic">
+	<h1>Percentage of out-of-state students in the freshman class, Berkeley</h1>
+	<div id="OOS-chart"></div>
+	<div class="footer">
+	    <p>Source: UC Berkeley Common Data Set</p>
+	</div>
+</div>
+<script type="text/javascript">
+GRAPHIC.lineChart('/data/charts/out-of-state.csv','#OOS-chart');
+</script>
+{% endblock %}

@@ -1,0 +1,61 @@
+.conclusion {
+
+    .full-block {
+        background: @darker-overlay;
+        color: #fff;
+        text-align: center;
+
+        .full-block-cell {
+            vertical-align: middle;
+        }
+
+        .full-block-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding-top: 40px;
+            @media @screen-small-above {
+                padding-top: 0;
+            }
+
+            h2 {
+                font-size: 16px;
+                margin: 0 auto;
+                text-transform: none;
+
+                @media @screen-tiny-above {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+            }
+
+            a {
+                color: @light-red;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .social-wrapper {
+                margin: 0 auto;
+                clear: both;
+
+                .social a {
+                    color: #fff;
+                    font-size: 30px;
+                    width: 50px;
+
+                    &:hover {
+                        color: @red;
+                    }
+                }
+            }
+
+            .remarks {
+                clear: both;
+            }
+        }
+    }
+
+}

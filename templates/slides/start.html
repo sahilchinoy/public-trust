@@ -1,0 +1,28 @@
+{% block slide_wrapper %}
+<div class="slide start" data-bgimage="img/sproul.jpg">
+    {% block slide_body %}
+    <div class="text full-block">
+        <div class="full-block-cell">
+            <div class="full-block-content">
+                <div class="row">
+                    <h1>The Public Trust</h1>
+                    <h2>In an era of diminishing state support, what makes UC Berkeley a public university?</h2>
+                    <h4>Oct. 18, 2015</h4>
+                </div>
+
+                <h3>By <a href="http://www.dailycal.org/author/schinoy">Sahil Chinoy</a> and <a href="http://www.dailycal.org/author/cweiner">Chloee Weiner</a><br />
+                Photography by <a href="http://www.dailycal.org/author/kchan">Kore Chan</a></h3>
+
+                <p class="sound-prompt">Put on your headphones — this is an audio experience. <br />
+                When you're ready, hit the right arrow.</p>
+                
+            </div><!--full-block-content-->
+                <div class="credit">
+                    {% block credit %}
+                    {% endblock credit %}
+                </div>
+        </div><!--full-block-cell-->
+    </div><!--full-block-->
+    {% endblock slide_body %}
+</div><!--slide-->
+{% endblock slide_wrapper %}

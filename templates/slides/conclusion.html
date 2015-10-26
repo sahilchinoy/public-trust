@@ -1,0 +1,30 @@
+{% block slide_wrapper %}
+<div class="slide conclusion" data-bgimage="img/sather.jpg">
+    {% block slide_body %}
+    <div class="text full-block">
+        <div class="full-block-cell">
+            <div class="full-block-content">
+                <div class="social-wrapper row">
+                  <ul class="social">
+                    <li> <a href=""><i class="fa fa-facebook"></i></a> </li>
+                    <li> <a href=""><i class="fa fa-twitter"></i></a> </li>
+                  </ul>
+                </div>
+                <br />
+                <br />
+                <br />
+                <div class="remarks row">
+                    <h2>Read more <a href="http://www.dailycal.org/section/news/uc/">higher education coverage</a> from The Daily Californian.</h2>
+                    <h2>View <a href="">this project's source</a>, modified from the NPR visual team's <a href="https://github.com/nprapps/app-template">application template</a>.</h2>
+                </div>
+                
+            </div><!--full-block-content-->
+                <div class="credit">
+                    {% block credit %}
+                    {% endblock credit %}
+                </div>
+        </div><!--full-block-cell-->
+    </div><!--full-block-->
+    {% endblock slide_body %}
+</div><!--slide-->
+{% endblock slide_wrapper %}

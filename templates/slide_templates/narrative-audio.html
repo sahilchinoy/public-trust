@@ -1,0 +1,31 @@
+{% extends '_slide.html' %}
+
+{% block slide_content %}
+<div class="narrative-header">
+    <div class="info-person">
+        <span class="name">{% block name %} {% endblock %}</span> &nbsp;
+        <span class="title">{% block title %} {% endblock %}</span>
+    </div>
+</div>
+
+<div class="subtitle-wrapper">
+    <p class="subtitles"></p>
+</div>
+
+<div class="narrative-player">
+    <div class="controls">
+        <div class="control-group">
+            <a href="#" class="play control-btn"></a>
+            <div class="player-progress">
+                <div class="total"></div>
+                <div class="played"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="img-wrapper">
+<img class="main-img lazy-load" data-src="img/{% block main_img %} {% endblock %}">
+</div>
+
+{% endblock %}
