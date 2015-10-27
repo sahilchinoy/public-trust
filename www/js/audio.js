@@ -72,13 +72,11 @@ var AUDIO = (function() {
         $subtitles = $slide.find('.subtitles');
 
         $('.img-box').click(function(e) {
-            $('.headshot').removeClass('playing');
-            $('.toggle').removeClass('playing');
-            $(this).find('.headshot').addClass('playing');
-            $(this).find('.toggle').addClass('playing');
+            $('.img-box').removeClass('playing');
+            $(this).addClass('playing');
             var narrativeFilename = $(this).data('audio');
             narrativeURL = APP_CONFIG.S3_BASE_URL + '/assets/audio/' + narrativeFilename + '.mp3';
-            subtitlesURL = APP_CONFIG.S3_BASE_URL + '/data/' + 'reich_some-danger' + '.json';
+            subtitlesURL = APP_CONFIG.S3_BASE_URL + '/data/' + narrativeFilename + '.json';
             setNarrativeMedia();
         });
 

@@ -2,8 +2,11 @@
 <div class="slide {% block extra_class %} {% endblock %}" data-narrative="{% block narrative %}{% endblock %}">
     {% block slide_body %}
     <div class="text full-block">
-        <div class="">
+        <div class="full-block-cell">
             <div class="full-block-content">
+                <div class="mini-nav">
+                    <a href="#0">The Public Trust</a> <i class="fa fa-angle-right"></i> {% block section_link %}{% endblock %}
+                </div>
                 {% block slide_content %}{% endblock slide_content %}
             </div><!--full-block-content-->
                 <div class="credit">

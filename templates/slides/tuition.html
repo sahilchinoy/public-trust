@@ -1,21 +1,22 @@
 {% extends 'slide_templates/titlecard.html' %}
 
+{% block section_link %}Tuition{% endblock %}
+
 {% block numeral %}II.{% endblock %}
 {% block subhed %}Sticker Price{% endblock %}
 {% block description %}The university is increasingly relying on student tuition for support. But because financial aid packages have increased simultaneously, it’s unclear whether rising tuition really represents a barrier for California’s low-income students, or a model in which wealthy and middle-income students subsidize the poor.{% endblock %}
 
 {% block exhibit %}
-<div class="graphic">
-	<h1>UC resident charges, 1980-2014</h1>
-	<div id="tuition-chart"></div>
-	<div class="footnotes">
-	    <p>Adjusted for inflation.</p>
-	</div>
-	<div class="footer">
-	    <p>Source: University of California</p>
-	</div>
+<div id="responsive-embed-berkeley-cost">
 </div>
 <script type="text/javascript">
-GRAPHIC.lineChart('/data/charts/tuition.csv','#tuition-chart');
+$(function() {
+    var pymParent = new pym.Parent(
+        'responsive-embed-berkeley-cost',
+        'https://s3-us-west-1.amazonaws.com/dc-graphics/dailygraphics/graphics/berkeley-cost/child.html',
+        {}
+    );
+});
 </script>
+    
 {% endblock %}

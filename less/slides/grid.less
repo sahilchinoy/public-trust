@@ -19,10 +19,15 @@
     }
 
     .head-grid {
-        position: absolute;
-        bottom: 10px;
-        right: 0;
-        width: 100%
+        //position: absolute;
+        //top: 100px;
+        //right: 0;
+        width: 100%;
+        margin-top: 20px;
+
+        @media @screen-small-above {
+            bottom: 30px;
+        }
     }
 
     .row {
@@ -33,67 +38,71 @@
      
      .img-box {
         display: inline-block;
-        width: 180px;
-        height: 180px;
-        margin: 20px 45px;
+        width: 90px;
+        height: 90px;
+        margin: 15px 25px;
         position: relative;
+        z-index: 1000;
+        opacity: 0.5;
+        .transition(opacity 0.1s linear);
+
+        @media @screen-small-above {
+            width: 160px;
+            height: 160px;
+            margin: 30px 45px;
+        }
+        
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &.playing {
+            opacity: 1;
+            outline: 1px solid @red;
+        }
 
         .headshot {
-           width: 100%;
-           z-index: 0;
-           opacity: 0.5;
-           .transition(opacity 0.3s linear);
-
-
-           &.playing {
-               opacity: 1;
-               outline: 1px solid @red;
-           }
+            width: 100%;
         }
 
         .name {
             position: absolute;
-            top: -20px;
+            top: -16px;
             left: 0;
             width: 100%;
             text-align: center;
-            color: @grey;
-        }
+            color: #000;
+            font-family: Helvetica;
+            font-size: 10px;
 
-        .toggle {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 2;
-            opacity: 0.7;
-            background: transparent url(/assets/img/icons/play.png) no-repeat;
-            background-position: 50% 50%;
-            background-size: 100%;
-
-            &.playing {
-                background: none;
+            @media @screen-small-above {
+                font-size: 13px;
             }
         }
+
      }
 
-     .narrative-player {
+     /*.narrative-player {
          bottom: 0;
 
          @media @screen-tiny-above {
-            top: 80px;
+            top: 20px;
             min-height: 95px;
          }
          @media @screen-small-above {
             min-height: 150px;
-            top: 100px; 
+            top: 40px; 
          }
     }
 
     .subtitle-wrapper {
-        top: 140px;
-    }
+        top: 10px;
+
+        @media @screen-small-above {
+            top: 80px; 
+         }
+    }*/
 
 
 }

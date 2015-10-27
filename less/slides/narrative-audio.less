@@ -2,12 +2,13 @@
     margin-top: 10px;
 
     .info-person {
-        margin: 0 auto;
+        margin: 10px auto;
         max-width: 700px;
         text-align: center;
 
         span {
             display: block;
+
             @media @screen-small-above {
                 display: inline;
             }
@@ -33,23 +34,20 @@
 
 .img-wrapper {
     width: 100%;
-    position: absolute;
-    bottom: 70px;
-    right: 0;
+    //position: absolute;
+    //bottom: 70px;
+    //right: 0;
     text-align: center;
+    margin-top: 40px;
 
     @media @screen-tiny-above {
-        bottom: 40px;
+        //bottom: 40px;
     }
 
     .main-img {
-        width: 80%;
-        height: 40vh;
+        width: 100%;
+        height: 60vh;
         object-fit: cover;
-
-        @media @screen-small-above {
-            height: 60vh;
-        }
 
     }
 

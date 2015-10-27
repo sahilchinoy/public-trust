@@ -1,19 +1,10 @@
 {% extends 'slide_templates/titlecard.html' %}
 
+{% block section_link %}Private Research{% endblock %}
+
 {% block numeral %}VI.{% endblock %}
 {% block subhed %}Private research{% endblock %}
 {% block description %}Campus partnerships with corporations bring in millions in research funding, some of which is used for compensation and operational costs. Is the public nature of the campus compromised when private interests can set research agendas and control publication?{% endblock %}
 
 {% block exhibit %}
-<div class="graphic">
-	<h1>Cash gifts to Berkeley from corporations, 2005-2014</h1>
-	<div id="corporations-chart"></div>
-	<div class="footer">
-	    <p>Source: University of California Annual Report on Private Support</p>
-	</div>
-</div>
-
-<script type="text/javascript">
-GRAPHIC.lineChart('/data/charts/corporations.csv','#corporations-chart');
-</script>
 {% endblock %}

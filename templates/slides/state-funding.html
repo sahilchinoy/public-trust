@@ -1,23 +1,22 @@
 {% extends 'slide_templates/titlecard.html' %}
 
+{% block section_link %}State Funding{% endblock %}
+
 {% block numeral %}I.{% endblock %}
 {% block subhed %}Edge of a Precipice{% endblock %}
 {% block description %}The state has disinvested dramatically from the University of California. As the university and the legislature continue to clash over state funding, some wonder whether full state support will ever return.{% endblock %}
 
 {% block exhibit %}
-<div class="graphic">
-	<h1>State funding per student, 1980-2014</h1>
-	<div id="general-funds-chart"></div>
-	<div class="footnotes">
-	    <p>Adjusted for inflation.</p>
-	</div>
-	<div class="footer">
-	    <p>Source: University of California</p>
-	</div>
+<div id="responsive-embed-uc-general-funds">
 </div>
-
 <script type="text/javascript">
-GRAPHIC.lineChart('/data/charts/general-funds.csv','#general-funds-chart');
+$(function() {
+    var pymParent = new pym.Parent(
+        'responsive-embed-uc-general-funds',
+        'https://s3-us-west-1.amazonaws.com/dc-graphics/dailygraphics/graphics/uc-general-funds/child.html',
+        {}
+    );
+});
 </script>
 
 {% endblock %}

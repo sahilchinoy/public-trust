@@ -12,7 +12,10 @@
         .full-block-content {
             max-width: 700px;
             margin: 0 auto;
-            padding-top: 40px;
+            padding: 20px 50px;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid @light-red;
+
             @media @screen-small-above {
                 padding-top: 0;
             }
@@ -40,6 +43,7 @@
             .social-wrapper {
                 margin: 0 auto;
                 clear: both;
+                padding-top: 30px;
 
                 .social a {
                     color: #fff;
@@ -47,7 +51,7 @@
                     width: 50px;
 
                     &:hover {
-                        color: @red;
+                        color: @light-red;
                     }
                 }
             }
