@@ -299,6 +299,17 @@ var isHidden = function() {
     return document[prop];
 }
 
+var setUpGraphics = function() {
+    $('.graphic-embed').each(function() {
+        var graphic = $(this).data('graphic');
+        var pymParent = new pym.Parent(
+            $(this).attr('id'),
+            'https://s3-us-west-1.amazonaws.com/dc-graphics/dailygraphics/graphics/' + graphic + '/child.html',
+            {}
+        );
+    });
+}
+
 
 $(document).ready(function() {
     $w = $(window).width();
@@ -326,6 +337,7 @@ $(document).ready(function() {
     AUDIO.setUpNarrativePlayer();
     AUDIO.setUpAmbientPlayer();
     setUpFullPage();
+    setUpGraphics();
     resize();
 
     // Redraw slides if the window resizes

@@ -15,7 +15,9 @@
 
 @darker-overlay: rgba(0,0,0,0.7);
 @red: #A30000;
+//@red: #00007F;
 @light-red: #ff7f7f;
+//@light-red: #A5D2FF;
 @grey: #777;
 
 @small-type: 14px;
@@ -225,7 +227,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
     .full-block-content {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 20px 40px;
+        padding: 0 40px;
         @media @screen-small-above {
              padding: 20px 100px;
         }
@@ -328,6 +330,35 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
     }
 }
 
+//full page image credit
+.credit {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 8px;
+
+    @media @screen-small-above {
+        font-size: 10px;
+    }
+}
+
+.img-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+
+    .main-img {
+        width: 100%;
+        max-width: 1000px;
+        height: 60vh;
+        object-fit: cover;
+
+    }
+}
+
 //subtitles
 .subtitle-wrapper {
     position: inherit;
@@ -338,8 +369,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
         padding: 10px;
         max-width: 600px;
         height: 60px;
-        //border: 1px solid @red;
-        background: fade(@light-red,10%);
+        background: rgba(150,150,150,0.1);
         margin-top: 10px;
 
         font-size: @small-type;
@@ -348,7 +378,6 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
         font-family: 'Miller Display';
 
         @media @screen-tiny-above {
-            //border: 1px solid @red;
             height: 70px;
             width: 90%;
             margin-top: 10px;
@@ -370,21 +399,13 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
     bottom: 0;
     right: 0;
     width: 100%;
-    //min-height: 50px;
     overflow: hidden;
 
     @media @screen-tiny-above {
-       //top: 80px;
        position: inherit;
-       //min-height: 95px;
-    }
-    @media @screen-small-above {
-        //min-height: 150px;
-       //top: 60px; 
     }
     
     .controls {
-        //position: absolute;
         left: 0;
         top: 0;
         width: 100%;

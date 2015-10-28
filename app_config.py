@@ -21,8 +21,8 @@ PROJECT_SLUG = 'public-trust'
 PROJECT_FILENAME = 'public_trust'
 
 # The name of the repository containing the source
-REPOSITORY_NAME = ''
-GITHUB_USERNAME = ''
+REPOSITORY_NAME = 'public-trust'
+GITHUB_USERNAME = 'sahilchinoy'
 REPOSITORY_URL = 'git@github.com:%s/%s.git' % (GITHUB_USERNAME, REPOSITORY_NAME)
 REPOSITORY_ALT_URL = None # 'git@bitbucket.org:nprapps/%s.git' % REPOSITORY_NAME'
 
@@ -34,18 +34,18 @@ ASSETS_SLUG = 'public-trust'
 DEPLOYMENT
 """
 PRODUCTION_S3_BUCKET = {
-    'bucket_name': 'dc-graphics',
-    'region': 'us-west-1'
+    'bucket_name': '',
+    'region': ''
 }
 
 STAGING_S3_BUCKET = {
-    'bucket_name': 'stage-apps.npr.org',
-    'region': 'us-east-1'
+    'bucket_name': 'dailycal',
+    'region': 'us-west-1'
 }
 
 ASSETS_S3_BUCKET = {
-    'bucket_name': 'assets.apps.npr.org',
-    'region': 'us-east-1'
+    'bucket_name': '',
+    'region': ''
 }
 
 DEFAULT_MAX_AGE = 20
@@ -146,27 +146,21 @@ def configure_targets(deployment_target):
 
     if deployment_target == 'production':
         S3_BUCKET = PRODUCTION_S3_BUCKET
-        S3_BASE_URL = 'http://%s/%s' % (S3_BUCKET['bucket_name'], PROJECT_SLUG)
+        S3_BASE_URL = 'http://projects.dailycal.org/%s' % (PROJECT_SLUG)
         S3_DEPLOY_URL = 's3://%s/%s' % (S3_BUCKET['bucket_name'], PROJECT_SLUG)
         DEBUG = False
     elif deployment_target == 'staging':
         S3_BUCKET = STAGING_S3_BUCKET
-        S3_BASE_URL = 'http://%s/%s' % (S3_BUCKET['bucket_name'], PROJECT_SLUG)
+        S3_BASE_URL = 'http://%s.s3-website-us-west-1.amazonaws.com/%s' % (S3_BUCKET['bucket_name'], PROJECT_SLUG)
         S3_DEPLOY_URL = 's3://%s/%s' % (S3_BUCKET['bucket_name'], PROJECT_SLUG)
-        SERVERS = STAGING_SERVERS
-        SERVER_BASE_URL = 'http://%s/%s' % (SERVERS[0], PROJECT_SLUG)
-        SERVER_LOG_PATH = '/var/log/%s' % PROJECT_FILENAME
-        DISQUS_SHORTNAME = 'nprviz-test'
         DEBUG = True
     else:
         S3_BUCKET = None
-        #S3_BASE_URL = 'http://127.0.0.1:8000'
         S3_BASE_URL = ''
         S3_DEPLOY_URL = None
         SERVERS = []
         SERVER_BASE_URL = 'http://127.0.0.1:8001/%s' % PROJECT_SLUG
         SERVER_LOG_PATH = '/tmp'
-        DISQUS_SHORTNAME = 'nprviz-test'
         DEBUG = True
 
     DEPLOYMENT_TARGET = deployment_target
