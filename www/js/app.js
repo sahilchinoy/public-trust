@@ -203,11 +203,13 @@ var animateProgress = function(index) {
     var percentage = (index + 1) / totalSlides;
     $currentProgress.css('width', percentage * 100 + '%');
 
-    if (index === 0) {
+    /*if (index === 0) {
         $progressIndicator.width(0);
     } else {
         $progressIndicator.width('100%');
-    }
+    }*/
+
+    $progressIndicator.width('100%');
 }
 
 var onSlideLeave = function(anchorLink, index, slideIndex, direction) {

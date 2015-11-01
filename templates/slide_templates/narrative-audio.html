@@ -25,7 +25,8 @@
 </div>
 
 <div class="img-wrapper">
-<img class="main-img lazy-load" data-src="img/{% block main_img %} {% endblock %}">
+    <img class="main-img lazy-load" data-src="img/{% block main_img %} {% endblock %}">
+    <div class="exhibit-credit">{% block exhibit_credit %}{% endblock %}</div>
 </div>
 
 {% endblock %}

@@ -334,7 +334,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
 .credit {
     position: absolute;
     right: 4px;
-    top: 4px;
+    bottom: 10px;
     font-family: Helvetica;
     text-transform: uppercase;
     color: #fff;
@@ -352,11 +352,25 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
 
     .main-img {
         width: 100%;
-        max-width: 1000px;
         height: 60vh;
         object-fit: cover;
-
     }
+
+    .exhibit-credit {
+        font-family: Helvetica;
+        text-transform: uppercase;
+        position: relative;
+        font-size: 8px;
+        margin-top: -16px;
+        margin-right: 3px;
+        color: #fff;
+        text-align: right;
+
+        @media @screen-small-above {
+            font-size: 10px;
+        }
+    }
+    
 }
 
 //subtitles
