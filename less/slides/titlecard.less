@@ -3,7 +3,7 @@
      .subhed {
         text-align: center;
         text-transform: uppercase;
-        color: @red;
+        color: @primary;
         font-size: 20px;
         margin: 10px 0;
         
@@ -33,9 +33,13 @@
     }
 
     .exhibit {
-        max-width: 1000px;
         margin: 0 auto;
         margin-top: 40px;
+
+        .graphic-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
         .pullquote {
             font-size: 18px;
@@ -43,7 +47,7 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 10px 30px 10px 30px;
-            border: 1px solid @red;
+            border: 1px solid @primary;
             font-style: italic;
 
             @media @screen-small-above {

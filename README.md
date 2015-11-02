@@ -28,8 +28,8 @@ Assumptions
 The following things are assumed to be true in this documentation.
 
 * You are running OSX.
-* You are using Python 2.7. (Probably the version that came OSX.)
-* You have [virtualenv](https://pypi.python.org/pypi/virtualenv) and [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) installed and working.
+* You are using Python 2.7.
+* You have [virtualenv](https://pypi.python.org/pypi/virtualenv) installed and working.
 
 What's in here?
 ---------------
@@ -45,8 +45,6 @@ The project contains the following folders and important files:
 * ``templates`` -- HTML ([Jinja2](http://jinja.pocoo.org/docs/)) templates, to be compiled locally.
 * ``tests`` -- Python unit tests.
 * ``www`` -- Static and compiled assets to be deployed. (a.k.a. "the output")
-* ``www/assets`` -- A symlink to an S3 bucket containing binary assets (images, audio).
-* ``www/live-data`` -- "Live" data deployed to S3 via cron jobs or other mechanisms. (Not deployed with the rest of the project.)
 * ``www/test`` -- Javascript tests and supporting files.
 * ``app.py`` -- A [Flask](http://flask.pocoo.org/) app for rendering the project locally.
 * ``app_config.py`` -- Global project configuration for scripts, deployment, etc.

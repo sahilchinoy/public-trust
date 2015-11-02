@@ -14,11 +14,10 @@
 }
 
 @darker-overlay: rgba(0,0,0,0.7);
-@red: #A30000;
-//@red: #00007F;
-@light-red: #ff7f7f;
-//@light-red: #A5D2FF;
+@primary: #A30000;
+@light-primary: #ff7f7f;
 @grey: #777;
+@accent: rgb(139, 192, 191);
 
 @small-type: 14px;
 
@@ -285,7 +284,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
     }
 
     .social a:hover {
-        color: @red;
+        color: @primary;
     }
 }
 
@@ -304,7 +303,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
     }
 
     .current-progress {
-        background-color: #236B8E;
+        background-color: @accent;
         height: 100%;
         .transition(width 1s ease-out);
         width: 0;
@@ -322,7 +321,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
     font-size: 12px;
 
     a {
-        color: @red;
+        color: @primary;
     }
 
     @media @screen-small {
@@ -517,14 +516,14 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
                 }
             }
             .played {
-                background-color: @red;
+                background-color: @primary;
                 width: 0;
                 height: 100%;
                 z-index: 1;
                 .transition(width 0.5s linear);
                 
                 @media @screen-tiny-above {
-                   background-color: @red;
+                   background-color: @primary;
                    border: none;
                 }
 
