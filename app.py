@@ -23,9 +23,6 @@ def index():
     """
     context = make_context()
 
-    with open('data/featured.json') as f:
-        context['featured'] = json.load(f)
-
     return make_response(render_template('index.html', **context))
 
 app.register_blueprint(static.static)

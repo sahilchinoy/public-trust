@@ -6,7 +6,6 @@ import os
 from re import findall
 import subprocess
 
-
 from flask import abort, make_response
 from werkzeug.datastructures import Headers
 
@@ -48,7 +47,6 @@ def _copy_js():
     copy = 'window.COPY = ' + copytext.Copy(app_config.COPY_PATH).json()
 
     return make_response(copy, 200, { 'Content-Type': 'application/javascript' })
-
 
 # Audio route to serve range headers for Safari.
 @static.route('/assets/audio/<string:filename>')
