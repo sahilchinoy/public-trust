@@ -21,7 +21,6 @@ var AUDIO = (function() {
             $subtitles = $slide.find('.subtitles');
 
             narrativeURL = APP_CONFIG.S3_BASE_URL + '/assets/audio/' + narrativeFilename + '.mp3';
-            //narrativeURL = 'https://s3-us-west-1.amazonaws.com/assets-dc-graphics/reich_some-danger.mp3';
             subtitlesURL = APP_CONFIG.S3_BASE_URL + '/data/' + narrativeFilename + '.json';
             setNarrativeMedia();
         // grid slide
@@ -31,27 +30,6 @@ var AUDIO = (function() {
             _pauseNarrativePlayer();
             narrativeVisible = false;
         }
-
-        /*
-
-        if (slideAnchor === 'I') {
-            var ambientURL = '/assets/audio/background.mp3'
-            setAmbientMedia(ambientURL)
-        }*/
-
-        /*if (rowAnchor === slideAnchor && ambientFilename !== null && !NO_AUDIO) {
-
-            ambientURL = APP_CONFIG.S3_BASE_URL + '/assets/audio/' + ambientFilename;
-
-            if (ambientFilename === 'STOP') {
-                $ambientPlayer.jPlayer('pause');
-                return;
-            }
-
-            if (ambientURL !== $ambientPlayer.data().jPlayer.status.src) {
-                setAmbientMedia(ambientURL);
-            }
-        }*/
     }
 
 
