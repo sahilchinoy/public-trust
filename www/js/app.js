@@ -242,7 +242,6 @@ var onDocumentKeyDown = function(e) {
 var onSlideClick = function(e) {
     /*if (isTouch) {
         if ($slides.first().hasClass('active')) {
-            AUDIO.fakeAmbientPlayer();
             AUDIO.fakeNarrativePlayer();
         }
         $.fn.fullpage.moveSlideRight();
@@ -337,7 +336,6 @@ $(document).ready(function() {
     $(document).keydown(onDocumentKeyDown);
 
     AUDIO.setUpNarrativePlayer();
-    AUDIO.setUpAmbientPlayer();
     setUpFullPage();
     setUpGraphics();
     resize();

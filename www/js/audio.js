@@ -105,7 +105,7 @@ var AUDIO = (function() {
 
     var fakeNarrativePlayer = function() {
         $narrativePlayer.jPlayer('setMedia', {
-            mp3: APP_CONFIG.S3_BASE_URL + '/assets/audio/' + 'doctor_01.mp3'
+            mp3: APP_CONFIG.S3_BASE_URL + '/assets/audio/' + 'reich_careful.mp3'
         }).jPlayer('pause');
     }
 
@@ -199,8 +199,6 @@ var AUDIO = (function() {
         'toggleAllAudio': toggleAllAudio,
         'setUpAmbientPlayer': setUpAmbientPlayer,
         'setUpNarrativePlayer': setUpNarrativePlayer,
-        'setAmbientMedia': setAmbientMedia,
-        'fakeAmbientPlayer': fakeAmbientPlayer,
         'fakeNarrativePlayer': fakeNarrativePlayer,
     }
 }());
