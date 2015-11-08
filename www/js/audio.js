@@ -32,7 +32,6 @@ var AUDIO = (function() {
         }
     }
 
-
     var setUpNarrativePlayer = function() {
         $narrativePlayer.jPlayer({
             swfPath: 'js/lib',
@@ -110,26 +109,28 @@ var AUDIO = (function() {
     }
 
     var onNarrativeTimeupdate = function(e) {
-        var totalTime = e.jPlayer.status.duration;
-        var position = e.jPlayer.status.currentTime;
+        if (narrativeVisible) {
+            var totalTime = e.jPlayer.status.duration;
+            var position = e.jPlayer.status.currentTime;
 
-        // animate progress bar
-        var percentage = position / totalTime;
+            // animate progress bar
+            var percentage = position / totalTime;
 
-        // if we're resetting the bar 
-        if (position === 0) {
-            $playedBar.addClass('no-transition');
-            $playedBar.css('width', 0);
-        } else {
-            $playedBar.removeClass('no-transition');
-            $playedBar.css('width', $thisPlayerProgress.width() * percentage + 'px');
+            // if we're resetting the bar 
+            if (position === 0) {
+                $playedBar.addClass('no-transition');
+                $playedBar.css('width', 0);
+            } else {
+                $playedBar.removeClass('no-transition');
+                $playedBar.css('width', $thisPlayerProgress.width() * percentage + 'px');
 
-            if (percentage === 1) {
-                $controlBtn.removeClass('pause').addClass('play');
+                if (percentage === 1) {
+                    $controlBtn.removeClass('pause').addClass('play');
+                }
             }
-        }
 
-        animateSubtitles(position);
+            animateSubtitles(position);
+        }
     }
 
     var animateSubtitles = function(position) {

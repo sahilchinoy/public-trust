@@ -32,7 +32,7 @@ var ANALYTICS = (function () {
     }
 
     var setupAll = function() {
-        //setupGoogle();
+        setupGoogle();
     }
 
     /*
@@ -133,7 +133,7 @@ var ANALYTICS = (function () {
     }
 
     // SLIDES
-
+    
     var exitSlide = function(slideIndex) {
         var currentTime = new Date();
         timeOnLastSlide = Math.abs(currentTime - slideStartTime);

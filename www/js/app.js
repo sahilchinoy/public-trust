@@ -166,6 +166,8 @@ var showNavigation = function() {
         }
         $prevArrow.removeClass('active');
         $prevArrow.hide();
+
+        $nextArrow.on('click', onFirstRightArrowClick);
     }
 
     else if ($slides.last().hasClass('active')) {
@@ -203,11 +205,12 @@ var animateProgress = function(index) {
     var percentage = (index + 1) / totalSlides;
     $currentProgress.css('width', percentage * 100 + '%');
 
-    /*if (index === 0) {
+    // No progress indicator on first slide
+    if (index === 0) {
         $progressIndicator.width(0);
     } else {
         $progressIndicator.width('100%');
-    }*/
+    }
 
     $progressIndicator.width('100%');
 }
@@ -220,9 +223,13 @@ var onSlideLeave = function(anchorLink, index, slideIndex, direction) {
 }
 
 var onFirstRightArrowClick = function() {
-    if (firstRightArrowClicked === false) {
-        ANALYTICS.firstRightArrowClick(arrowTest);
-        firstRightArrowClicked = true;
+    /*
+    * Fake audio player for mobile.
+    */
+    if (isTouch) {
+        if ($slides.first().hasClass('active')) {
+            AUDIO.fakeNarrativePlayer();
+        }
     }
 }
 
@@ -240,12 +247,12 @@ var onDocumentKeyDown = function(e) {
 }
 
 var onSlideClick = function(e) {
-    /*if (isTouch) {
+    if (isTouch) {
         if ($slides.first().hasClass('active')) {
             AUDIO.fakeNarrativePlayer();
         }
         $.fn.fullpage.moveSlideRight();
-    }*/
+    }
     return true;
 }
 
