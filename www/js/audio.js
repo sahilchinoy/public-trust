@@ -41,6 +41,15 @@ var AUDIO = (function() {
         });
     }
 
+    var _playGridAudio = function($box) {
+        $('.img-box').removeClass('playing');
+        $box.addClass('playing');
+        var narrativeFilename = $box.data('audio');
+        narrativeURL = APP_CONFIG.S3_BASE_URL + '/assets/audio/' + narrativeFilename + '.mp3';
+        subtitlesURL = APP_CONFIG.S3_BASE_URL + '/data/' + narrativeFilename + '.json';
+        setNarrativeMedia();
+    }
+
     var _setUpGrid = function($slide) {
         $thisPlayerProgress = $slide.find('.player-progress');
         $playedBar = $slide.find('.player-progress .played');
@@ -49,15 +58,10 @@ var AUDIO = (function() {
         $subtitles = $slide.find('.subtitles');
 
         $('.img-box').click(function(e) {
-            $('.img-box').removeClass('playing');
-            $(this).addClass('playing');
-            var narrativeFilename = $(this).data('audio');
-            narrativeURL = APP_CONFIG.S3_BASE_URL + '/assets/audio/' + narrativeFilename + '.mp3';
-            subtitlesURL = APP_CONFIG.S3_BASE_URL + '/data/' + narrativeFilename + '.json';
-            setNarrativeMedia();
+            _playGridAudio($(this));
         });
 
-        $('.img-box.first').click();
+        _playGridAudio($('.img-box.first'));
     }
 
     var setNarrativeMedia = function() {

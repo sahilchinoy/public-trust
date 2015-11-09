@@ -251,24 +251,24 @@ var onSlideClick = function(e) {
         if ($slides.first().hasClass('active')) {
             AUDIO.fakeNarrativePlayer();
         }
-        $.fn.fullpage.moveSlideRight();
+        
+        // Not on the grid slide
+        if (!$slides.eq($slides.length - 2).hasClass('active')) {
+            $.fn.fullpage.moveSlideRight();
+        }   
     }
     return true;
 }
 
 var fakeMobileHover = function() {
     $(this).css({
-        'background-color': '#fff',
-        'color': '#000',
-        'opacity': .9
+        'opacity': 1
     });
 }
 
 var rmFakeMobileHover = function() {
     $(this).css({
-        'background-color': 'rgba(0, 0, 0, 0.5)',
-        'color': '#fff',
-        'opacity': .5
+        'opacity': .3
     });
 }
 
