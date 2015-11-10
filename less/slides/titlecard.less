@@ -28,13 +28,20 @@
         line-height: 1.3em;
 
         @media @screen-small-above {
+            font-size: 16px;
+        }
+
+        @media @screen-large-above {
             font-size: 18px;
         }
     }
 
     .exhibit {
-        margin: 0 auto;
-        margin-top: 40px;
+        margin: 10px auto 0 auto;
+
+        @media @screen-small-above {
+            margin-top: 30px;
+        }
 
         .graphic-wrapper {
             max-width: 900px;

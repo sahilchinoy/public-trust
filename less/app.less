@@ -343,14 +343,15 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
 .credit {
     position: absolute;
     right: 4px;
-    bottom: 10px;
+    bottom: 0;
     font-family: Helvetica;
     text-transform: uppercase;
     color: #fff;
     font-size: 8px;
 
-    @media @screen-small-above {
+    @media @screen-tiny-above {
         font-size: 10px;
+        bottom: 10px;
     }
 }
 
@@ -365,7 +366,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
         object-fit: cover;
         margin-top: 10px;
 
-        @media @screen-small-above {
+        @media @screen-medium-above {
             height: 60vh;
             margin-top: 30px;
         }
@@ -401,23 +402,28 @@ h1,h2,h3,h4,h5,h6,p,ul,ol,li,span {
         height: 60px;
         background: rgba(150,150,150,0.1);
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.2;
         text-align: center;
         font-family: 'Miller Display';
 
         @media @screen-tiny-above {
-            height: 70px;
+            height: 60px;
             width: 90%;
             margin-top: 10px;
-            font-size: 16px;
+            font-size: 14px;
         }
-         
+
         @media @screen-small-above {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 0;
+        }
+
+        @media @screen-large-above {
+            height: 90px;
             font-size: 20px;
             line-height: 1.6;
-            height: 90px;
-            margin-top: 0;
         }
         
     }

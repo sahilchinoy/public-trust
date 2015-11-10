@@ -3,40 +3,34 @@
     .full-block {
         background: @darker-overlay;
         color: #fff;
+
+        .mini-nav a.link {
+            color: @light-primary;
+        }
         
         .full-block-cell {
             vertical-align: middle;
-            
-            .mini-nav a.dropdown {
-                color: @light-primary;
-            }
         }
 
         .full-block-content {
             text-align: center;
-            max-width: 700px;
+            max-width: 600px;
+            width: 70%;
             margin: 0 auto;
-            padding: 20px 50px;
+            padding: 15px 15px;
             background: rgba(0,0,0,0.5);
-            border: 1px solid @light-primary;
-
+    
             @media @screen-small-above {
+                border: 1px solid @light-primary;
                 padding-top: 0;
             }
 
-            h2 {
-                font-size: 16px;
-                margin: 0 auto;
-                text-transform: none;
+            p {
+                font-size: 14px;
 
                 @media @screen-tiny-above {
                     font-size: 18px;
-                    margin-bottom: 10px;
                 }
-            }
-
-            p {
-                font-style: italic;
             }
 
             a {

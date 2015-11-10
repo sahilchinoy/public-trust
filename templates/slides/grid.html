@@ -1,86 +1,64 @@
-{% block slide_wrapper %}
-<div class="slide grid">
-    {% block slide_body %}
-    <div class="text full-block">
-        <div class="full-block-cell">
-            <div class="mini-nav">
-                <div class="btn-group">
-                    <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span> The Public Trust</a> <i class="fa fa-angle-right"></i> Conclusion
-                      <ul class="dropdown-menu">
-                        <li><a href="#2">State funding</a></li>
-                        <li><a href="#6">Tuition</a></li>
-                        <li><a href="#10">Out-of-state</a></li>
-                        <li><a href="#14">Access &amp; Equity</a></li>
-                        <li><a href="#17">Philanthropy</a></li>
-                        <li><a href="#21">Private research</a></li>
-                        <li><a href="#24">Conclusion</a></li>
-                      </ul>
-                </div>
+{% extends '_slide.html' %}
+
+{% block extra_class %}grid{% endblock %}
+{% block section_link %}conclusion{% endblock %}
+
+
+{% block slide_content %}
+<div class="main-q">How well is UC Berkeley fulfilling its public mission?</div>
+
+<div class="narrative-player">
+    <div class="controls">
+        <div class="control-group">
+            <a href="#" class="play control-btn"></a>
+            <div class="player-progress">
+                <div class="total"></div>
+                <div class="played"></div>
             </div>
-            <div class="full-block-content">
+        </div>
+    </div>
+</div>
 
-                <div class="narrative-player">
-                    <div class="controls">
-                        <div class="control-group">
-                            <a href="#" class="play control-btn"></a>
-                            <div class="player-progress">
-                                <div class="total"></div>
-                                <div class="played"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="subtitle-wrapper">
+    <p class="subtitles"></p>
+</div>
 
-                <div class="subtitle-wrapper">
-                    <p class="subtitles"></p>
-                </div>
+<div class="head-grid">
+    <div class="row">
+        <div class="img-box first" data-audio="johnson_pretty-good">
+            <img class="headshot lazy-load" data-src="img/head/johnson_head">
+            <span class="name">Hans Johnson</span>
+        </div>
+        <div class="img-box" data-audio="nasir_fiber">
+            <img class="headshot lazy-load" data-src="img/head/nasir_head">
+            <span class="name">Na'ilah Suad Nasir</span>
+        </div>
+        <div class="img-box" data-audio="reich_quasi-public">
+            <img class="headshot lazy-load" data-src="img/head/reich_head">
+            <span class="name">Robert Reich</span>
+        </div>
+        <div class="img-box" data-audio="cochrane_progressive">
+            <img class="headshot lazy-load" data-src="img/head/cochrane_head">
+            <span class="name">Debbie Cochrane</span>
+        </div>
 
-                <div class="head-grid">
-                    <div class="row">
-                        <div class="img-box first" data-audio="cochrane_progressive">
-                            <img class="headshot lazy-load" data-src="img/head/cochrane_head">
-                            <span class="name">Debbie Cochrane</span>
-                        </div>
-                        <div class="img-box" data-audio="johnson_pretty-good">
-                            <img class="headshot lazy-load" data-src="img/head/johnson_head">
-                            <span class="name">Hans Johnson</span>
-                        </div>
-                        <div class="img-box" data-audio="nasir_fiber">
-                            <img class="headshot lazy-load" data-src="img/head/nasir_head">
-                            <span class="name">Na'ilah Suad Nasir</span>
-                        </div>
-                        <div class="img-box" data-audio="reich_quasi-public">
-                            <img class="headshot lazy-load" data-src="img/head/reich_head">
-                            <span class="name">Robert Reich</span>
-                        </div>
+        <div class="img-box" data-audio="christ_always">
+            <img class="headshot lazy-load" data-src="img/head/christ_head">
+            <span class="name">Carol Christ</span>
+        </div>
+        <div class="img-box" data-audio="kadir_mission">
+            <img class="headshot lazy-load" data-src="img/head/kadir_head">
+            <span class="name">Khalid Kadir</span>
+        </div>
+        <div class="img-box" data-audio="brady_obstacles">
+            <img class="headshot lazy-load" data-src="img/head/brady_head">
+            <span class="name">Henry Brady</span>
+        </div>
+        <div class="img-box" data-audio="dirks_crisis">
+            <img class="headshot lazy-load" data-src="img/head/dirks_head">
+            <span class="name">Nicholas Dirks</span>
+        </div>
+    </div>
 
-                        <div class="img-box" data-audio="christ_always">
-                            <img class="headshot lazy-load" data-src="img/head/christ_head">
-                            <span class="name">Carol Christ</span>
-                        </div>
-                        <div class="img-box" data-audio="kadir_mission">
-                            <img class="headshot lazy-load" data-src="img/head/kadir_head">
-                            <span class="name">Khalid Kadir</span>
-                        </div>
-                        <div class="img-box" data-audio="brady_obstacles">
-                            <img class="headshot lazy-load" data-src="img/head/brady_head">
-                            <span class="name">Henry Brady</span>
-                        </div>
-                        <div class="img-box" data-audio="dirks_crisis">
-                            <img class="headshot lazy-load" data-src="img/head/dirks_head">
-                            <span class="name">Nicholas Dirks</span>
-                        </div>
-                    </div>
-
-                </div>
-                
-            </div><!--full-block-content-->
-                <div class="credit">
-                    {% block credit %}
-                    {% endblock credit %}
-                </div>
-        </div><!--full-block-cell-->
-    </div><!--full-block-->
-    {% endblock slide_body %}
-</div><!--slide-->
-{% endblock slide_wrapper %}
+</div>
+{% endblock slide_content %}

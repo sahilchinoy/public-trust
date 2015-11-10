@@ -1,41 +1,20 @@
-{% block slide_wrapper %}
-<div class="slide intro" data-bgimage="img/sather.jpg">
-    {% block slide_body %}
-    <div class="text full-block">
-        <div class="full-block-cell">
-            <div class="mini-nav">
-                <div class="btn-group">
-                    <a class="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span> The Public Trust</a> <i class="fa fa-angle-right"></i> Intro
-                      <ul class="dropdown-menu">
-                        <li><a href="#1">Intro</a></li>
-                        <li><a href="#2">State funding</a></li>
-                        <li><a href="#6">Tuition</a></li>
-                        <li><a href="#10">Out-of-state</a></li>
-                        <li><a href="#14">Access &amp; Equity</a></li>
-                        <li><a href="#17">Philanthropy</a></li>
-                        <li><a href="#21">Private research</a></li>
-                        <li><a href="#24">Conclusion</a></li>
-                      </ul>
-                </div>
-            </div>
-            
-            <div class="full-block-content">
-            <p>In 1960, California passed its <a target="_blank" href="http://www.ucop.edu/acadinit/mastplan/MasterPlan1960.pdf">Master Plan for Higher Education</a>, which laid the foundation for public education in the state. It envisioned a University of California without tuition that guaranteed access for the top one-eighth of the state’s high school graduates, funded by taxpayers who believed in the university as a source of economic and social mobility.</p>
+{% extends '_slide.html' %}
 
-            <p>Since then, UC Berkeley has attempted to balance its responsibility to the state's people with its status as an elite academic institution, a challenge faced by few others.</p>
+{% block extra_class %}intro{% endblock %}
+{% block bgimage %}img/sather.jpg{% endblock %}
 
-            <p>Today, state disinvestment, rising tuition costs, more out-of-state students, increased private research funding and a greater emphasis on alumni giving have left some questioning whether UC Berkeley is drifting farther from the public ideal of the Master Plan and closer to the private universities with which it has always competed.</p>
+{% block section_link %}Introduction{% endblock %}
 
-            <p>Some have suggested that UC Berkeley should adapt to the reality of the state’s financial priorities — that a public university is not defined by its level of state funding, that the values ingrained by 147 years of history are immutable. Others worry it is only a matter of time before UC Berkeley’s shifting funding model undermines the institution’s public mission.</p>
+{% block slide_content %}
+<p>In 1960, California passed the <a target="_blank" href="http://www.ucop.edu/acadinit/mastplan/MasterPlan1960.pdf">Master Plan for Higher Education</a>, which laid the foundation for public education in the state. It envisioned a University of California without tuition that guaranteed access for the top one-eighth of the state’s high school graduates, funded by taxpayers who believed in the university as a source of economic and social mobility.</p>
 
-            <p>The Master Plan defined the University of California as a public trust. Half a century later, in the face of the fiscal and political uncertainty of its current situation, what makes UC Berkeley a public institution?</p>
+<p>UC Berkeley in particular, as an elite public university, has aimed to reconcile its responsibility to the state's people with its status as a highly-selective academic institution &mdash; a challenge faced by few others.</p>
 
-            </div><!--full-block-content-->
-                <div class="credit">
-                    Mike Miller / Daily Californian Archives
-                </div>
-        </div><!--full-block-cell-->
-    </div><!--full-block-->
-    {% endblock slide_body %}
-</div><!--slide-->
-{% endblock slide_wrapper %}
+<p>Today, state disinvestment, rising tuition costs, more out-of-state students, increased private research funding and a greater emphasis on alumni giving have left some questioning whether UC Berkeley is drifting farther from the public ideal of the Master Plan and closer to the private universities with which it has always competed.</p>
+
+<p>Some have suggested that UC Berkeley should adapt to the reality of the state’s financial priorities — that a public university is not defined by its level of state funding, that the values ingrained by 147 years of history are immutable. Others worry it is only a matter of time before UC Berkeley’s shifting funding model undermines the institution’s public mission.</p>
+
+<p>The Master Plan defined the University of California as a public trust. Half a century later, in the face of the fiscal and political uncertainty of its current situation, what makes UC Berkeley a public institution?</p>
+{% endblock slide_content %}
+
+{% block credit %}Mike Miller / Daily Californian Archives{% endblock credit %}
