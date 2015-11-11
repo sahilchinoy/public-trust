@@ -60,7 +60,6 @@ var setUpFullPage = function() {
         loopHorizontal: false,
         afterRender: onPageLoad,
         afterSlideLoad: lazyLoad,
-        onSlideLeave: onSlideLeave
     });
 };
 
@@ -79,26 +78,6 @@ var lazyLoad = function(anchorLink, index, slideAnchor, slideIndex) {
     showNavigation();
     AUDIO.checkForAudio(slideIndex);
     animateProgress(slideIndex);
-
-    // Completion tracking
-    how_far = (slideIndex + 1) / ($slides.length - 1);
-
-    if (how_far >= completion + 0.25) {
-        completion = how_far - (how_far % 0.25);
-
-        if (completion === 0.25) {
-            ANALYTICS.completeTwentyFivePercent();
-        }
-        else if (completion === 0.5) {
-            ANALYTICS.completeFiftyPercent();
-        }
-        else if (completion === 0.75) {
-            ANALYTICS.completeSeventyFivePercent();
-        }
-        else if (completion === 1) {
-            ANALYTICS.completeOneHundredPercent();
-        }
-    }
 };
 
 var setSlidesForLazyLoading = function(slideIndex) {
@@ -215,13 +194,6 @@ var animateProgress = function(index) {
     $progressIndicator.width('100%');
 }
 
-var onSlideLeave = function(anchorLink, index, slideIndex, direction) {
-    /*
-    * Called when leaving a slide.
-    */
-    ANALYTICS.exitSlide(slideIndex.toString());
-}
-
 var onFirstRightArrowClick = function() {
     /*
     * Fake audio player for mobile.
@@ -235,7 +207,6 @@ var onFirstRightArrowClick = function() {
 
 var onDocumentKeyDown = function(e) {
     if (e.which === 37 || e.which === 39) {
-        ANALYTICS.useKeyboardNavigation();
         if (e.which === 37) {
             $.fn.fullpage.moveSlideLeft();
         } else if (e.which === 39) {
@@ -275,8 +246,6 @@ var rmFakeMobileHover = function() {
 var onControlBtnClick = function(e) {
     e.preventDefault();
     AUDIO.toggleNarrativeAudio();
-    ANALYTICS.trackEvent('pause-button');
-
     e.stopPropagation();
 }
 

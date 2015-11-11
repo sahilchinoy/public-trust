@@ -24,16 +24,14 @@
     {{ JS.push('js/lib/jquery.fullpage.js') }}
     {{ JS.push('js/lib/jquery.jplayer.js') }}
     {{ JS.push('js/lib/jquery.jplayer.fade.js') }}
-    {{ JS.push('js/lib/webfont.js') }}
     {{ JS.push('js/lib/pym.js') }}
     {% block extra_foot_js %}{% endblock extra_foot_js %}
     {{ JS.push('js/app_config.js') }}
-    {{ JS.push('js/analytics.js') }}
     {{ JS.push('js/audio.js') }}
     {{ JS.push('js/app.js') }}
     {{ JS.render('js/app-footer.min.js') }}
 
-    <!--<script type="text/javascript" src="//www.dailycal.org/google-analytics-js/"></script>-->
+    <script async type="text/javascript" src="//www.dailycal.org/google-analytics-js/"></script>
 
 </head>
 <body>
