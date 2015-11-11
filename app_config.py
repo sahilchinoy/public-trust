@@ -106,8 +106,8 @@ SHARE_URL = 'http://%s/%s/' % (PRODUCTION_S3_BUCKET['bucket_name'], PROJECT_SLUG
 SERVICES
 """
 GOOGLE_ANALYTICS = {
-    'ACCOUNT_ID': 'UA-69245156-1',
-    'DOMAIN': 'http://dailycal.s3-website-us-west-1.amazonaws.com/public-trust/',
+    'ACCOUNT_ID': '',
+    'DOMAIN': '',
 }
 
 """

@@ -5,7 +5,6 @@ var $h;
 var $slides;
 var $arrows;
 var $nextArrow;
-var $startCardButton;
 var $controlBtn;
 var $thisPlayerProgress;
 var $playedBar;
@@ -25,8 +24,6 @@ var optimalHeight;
 var w;
 var h;
 var completion = 0;
-var firstRightArrowClicked = false;
-var presentedConclusion = false;
 var visibilityProperty = null;
 
 var resize = function() {
@@ -45,7 +42,6 @@ var resize = function() {
         w = optimalWidth;
         h = $h;
     }
-
 };
 
 var setUpFullPage = function() {
@@ -120,6 +116,9 @@ var loadImages = function($slide) {
         }
     }
 
+    /*
+    * Lazy-load regular, inline images.
+    */
     var $images = $slide.find('img.lazy-load');
     if ($images.length > 0) {
         for (var i = 0; i < $images.length; i++) {
@@ -217,20 +216,6 @@ var onDocumentKeyDown = function(e) {
     return true;
 }
 
-var onSlideClick = function(e) {
-    if (isTouch) {
-        if ($slides.first().hasClass('active')) {
-            AUDIO.fakeNarrativePlayer();
-        }
-        
-        // Not on the grid slide
-        if (!$slides.eq($slides.length - 2).hasClass('active')) {
-            $.fn.fullpage.moveSlideRight();
-        }   
-    }
-    return true;
-}
-
 var fakeMobileHover = function() {
     $(this).css({
         'opacity': 1
@@ -294,7 +279,6 @@ $(document).ready(function() {
 
     $slides = $('.slide');
     $navButton = $('.primary-navigation-btn');
-    $startCardButton = $('.btn-go');
     $arrows = $('.controlArrow');
     $prevArrow = $arrows.filter('.prev');
     $nextArrow = $arrows.filter('.next');
@@ -305,7 +289,6 @@ $(document).ready(function() {
     $progressIndicator = $('.progress-indicator');
     $currentProgress = $('.current-progress');
 
-    $slides.on('click', onSlideClick);
     $controlBtn.on('click', onControlBtnClick);
     $arrows.on('touchstart', fakeMobileHover);
     $arrows.on('touchend', rmFakeMobileHover);
