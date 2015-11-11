@@ -107,7 +107,7 @@ SERVICES
 """
 GOOGLE_ANALYTICS = {
     'ACCOUNT_ID': 'UA-69245156-1',
-    'DOMAIN': 'projects.dailycal.org',
+    'DOMAIN': 'http://dailycal.s3-website-us-west-1.amazonaws.com/public-trust/',
 }
 
 """
